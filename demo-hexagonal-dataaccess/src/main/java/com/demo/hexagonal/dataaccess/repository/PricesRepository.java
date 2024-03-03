@@ -12,7 +12,7 @@ import com.demo.hexagonal.dataaccess.model.PriceEntity;
 @Repository
 public interface PricesRepository extends JpaRepository<PriceEntity, Integer> {
 
-	List<PriceEntity> findByIdBrand(String Name);
+	List<PriceEntity> findByIdBrand(Integer idBrand);
 	List<PriceEntity> findByIdBrandAndIdProduct(Integer idBrand, Integer idProduct);
 	
 	/**
