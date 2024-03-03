@@ -5,11 +5,9 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 
 import com.demo.hexagonal.dataaccess.model.PriceEntity;
 
-@Repository
 public interface PricesRepository extends JpaRepository<PriceEntity, Integer> {
 
 	List<PriceEntity> findByIdBrand(Integer idBrand);
