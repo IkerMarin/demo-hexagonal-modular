@@ -6,4 +6,16 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>demo-hexagonal-core</artifactId>
+  
+  <dependencies>
+	  <dependency>
+	    <groupId>com.demo.hexagonal</groupId>
+	    <artifactId>demo-hexagonal-domain</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter</artifactId>
+	  </dependency>
+  </dependencies>
 </project>
