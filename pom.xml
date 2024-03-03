@@ -9,6 +9,7 @@
   	<module>demo-hexagonal-domain</module>
   	<module>demo-hexagonal-core</module>
   	<module>demo-hexagonal-dataaccess</module>
+  	<module>demo-hexagonal-launcher</module>
   </modules>
   
   <parent>
