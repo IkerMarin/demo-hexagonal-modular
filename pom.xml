@@ -10,6 +10,7 @@
   	<module>demo-hexagonal-core</module>
   	<module>demo-hexagonal-dataaccess</module>
   	<module>demo-hexagonal-launcher</module>
+  	<module>demo-hexagonal-rest</module>
   </modules>
   
   <parent>
