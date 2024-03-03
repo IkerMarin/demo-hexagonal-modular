@@ -46,5 +46,8 @@ public class PriceEntity {
 	
 	@Column (name = "PRICE")
 	private Float price;
+	
+	@Column (name = "CURR")
+	private String currency;
 
 }

@@ -21,5 +21,6 @@ public class Price {
 	private Integer idProduct;
 	private Integer priority;
 	private Float price;
+	private String currency;
 
 }
