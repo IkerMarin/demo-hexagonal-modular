@@ -12,7 +12,8 @@ import com.demo.hexagonal.dataaccess.mapper.PriceDataAccessMapper;
 import com.demo.hexagonal.dataaccess.model.PriceEntity;
 import com.demo.hexagonal.dataaccess.repository.PricesRepository;
 import com.demo.hexagonal.domain.data.Price;
-import com.demo.hexagonal.domain.data.port.PricePersistencePort;
+import com.demo.hexagonal.domain.exception.PriceNotFoundException;
+import com.demo.hexagonal.domain.port.PricePersistencePort;
 
 @Service
 public class PriceDataAccessAdapter implements PricePersistencePort {
@@ -24,12 +25,12 @@ public class PriceDataAccessAdapter implements PricePersistencePort {
 	private PriceDataAccessMapper mapper;
 
 	@Override
-	public Price getPriceById(Integer idBrand, Integer idProduct, LocalDateTime eventDate) {
+	public Price getPriceByBrandProductAndDate(Integer idBrand, Integer idProduct, LocalDateTime eventDate) {
 		List<PriceEntity> result = pricesRepository.findPriceByBrandProductAndEventDate(idBrand, idProduct, eventDate);
 		Optional<PriceEntity> priceEntityFiltered = result.stream().sorted(Comparator.comparing(PriceEntity::getPriority).reversed()).findFirst();
 		
 		if(!priceEntityFiltered.isPresent()) {
-			throw new RuntimeException();
+			throw new PriceNotFoundException();
 		}
 		
 		
