@@ -1,10 +1,11 @@
-package com.demo.hexagonal.core.service;
+package com.demo.hexagonal.core.service.impl;
 
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.demo.hexagonal.core.service.PriceService;
 import com.demo.hexagonal.domain.data.Price;
 import com.demo.hexagonal.domain.port.PricePersistencePort;
 
